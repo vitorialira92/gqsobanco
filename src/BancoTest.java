@@ -25,5 +25,11 @@ class BancoTest {
 
     @Test
     void saldo() {
+        bd.deposito(500);
+        assertEquals(500, bd.saldo());
+        bd.saque(50);
+        assertEquals(450, bd.saldo());
+        bd.deposito(20);
+        assertEquals(470, bd.saldo());
     }
 }
