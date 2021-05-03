@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BancoTest {
 
+    Banco bd = new Banco();
+
     @Test
     void deposito() {
     }
