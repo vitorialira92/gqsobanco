@@ -19,6 +19,8 @@ class BancoTest {
         assertEquals(true, bd.deposito(500));
         assertEquals(true, bd.saque(10));
         assertEquals(false, bd.saque(-60));
+        assertEquals(false, bd.saque(0));
+        assertEquals(false, bd.saque(600));
     }
 
     @Test

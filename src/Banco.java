@@ -19,6 +19,9 @@ public class Banco {
         if(saldo < valor){
             return false;
         }
+        if(valor <= 0){
+            return false;
+        }
         saldo -= valor;
         return true;
     }
