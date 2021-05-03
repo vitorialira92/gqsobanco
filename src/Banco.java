@@ -7,6 +7,7 @@ public class Banco {
     }
 
     public boolean deposito(double valor){
+        //não é permitido depositar valores negativos
         if(valor <= 0){
             return false;
         }
@@ -14,6 +15,10 @@ public class Banco {
         return true;
     }
     public boolean saque(double valor){
+        //não é possível sacar um valor maior que o saldo da conta
+        if(saldo < valor){
+            return false;
+        }
         saldo -= valor;
         return true;
     }
